@@ -11,7 +11,6 @@ int main()
 	string ch,sh,dh;
 	int choice;
 		
-		
 		cout<<"ENTER DATA FILE NAME:";
          cin>>ch;
 	   cout<<"ENTER DEFINATION FILE NAME:";
@@ -37,45 +36,26 @@ int main()
 	   	cin>>dh;
       search(ch,dh);	 
 }
-
-
-
 	//ob.close();
 	return 0;
 }
 
-void readdef( string gh)
-{
-	
+void readdef( string gh){
 	int i;
 	char ch;
 	string data;
-	
-	
 	ifstream outfile(gh.c_str());
 	char a;
 	  while(!outfile.eof())
- //  while(outfile-1)
-    {
- 
-
+ //  while(outfile-1) {
           getline(outfile,data);
    cout<<j<<".";
-         for(int i=0;i<data.length();i++)
-		//for(int i=0;i!=' ';i++)
-       // {
-            
-            {
-			
+         for(int i=0;i<data.length();i++){	
 		   ch=data[i];
 		   	cout<<ch;
-			if(ch==' ')
-			{
-			
-				break;
-				
-			}
-		    
+			if(ch==' '){
+			  break;	
+			}		    
 //	cout<<"\n";
 	}
 		//}
@@ -84,61 +64,39 @@ void readdef( string gh)
 cout<<"\n";
 //cout<<j;
 j++;
-
 }
-
 	outfile.close();
 }
 
-
-
-
- void search(string g, string substr)
- {
+ void search(string g, string substr) {
  	string str;
  	int temp;
    ifstream outfile(g.c_str());
    {
-   	
-   	   while(!outfile.eof())
-   {
- 
-
+   	   while(!outfile.eof())   {
           getline(outfile,str);
-   
-          for(int i=0;str[i]!='\0';i++)
-    {
+          for(int i=0;str[i]!='\0';i++)    {
         j=0;
-        if(str[i]==substr[j])
-        {
+        if(str[i]==substr[j])        {
             temp=i+1;
-            while(str[i]==substr[j])
-            {
+            while(str[i]==substr[j]){
                 i++;
                 j++;
             }
  
-            if(substr[j]=='\0')
-            {
+            if(substr[j]=='\0')            {
             	cout<<str;
-              
                 exit(0);
             }
-            else
-            {
+            else{
                 i=temp;
                 temp=0;
             }
         }
 }}
-
      if(temp==0)
-        cout<<"Record not FOUND";
- 
-			
-		    
-}
-   
+        cout<<"Record not FOUND";	    
+}  
 }
    
    
