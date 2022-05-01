@@ -2,7 +2,7 @@ create table country(cid int primary, cName char(20) , Population int);
 
 create table covidCases(cid int, cdate date,newcases int, recovered int, death int);
 
-desc country 
+desc country; 
 
 
 insert into country values ('101','India','12416789');
@@ -26,4 +26,3 @@ select c.cname, sum(case.newcases) from country as c, covidcases as case group b
 select country.cname, sum(covidcases.newcases) from country, covidcases group by country.cname;
 
 select country.cname, sum(covidcases.newcases) from country, covidcases where covidcases.cdate between '01-jan-22' and '01-apr-22' group by country.cname;
-
