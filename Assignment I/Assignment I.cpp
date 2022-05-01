@@ -26,7 +26,7 @@ int main()
 	 	
 	 	if(choice==j)
 		 {
-		 //	exit(0);
+		 	exit(0);
 		 }
 	 
 	 else	
