@@ -67,14 +67,14 @@ j++;
 	outfile.close();
 }
 
- void search(string g, string substr) {
+ void search(string g, string substr){
  	string str;
  	int temp;
    ifstream outfile(g.c_str());
    {
    	   while(!outfile.eof())   {
           getline(outfile,str);
-          for(int i=0;str[i]!='\0';i++)    {
+          for(int i=0;str[i]!='\0';i++){
         j=0;
         if(str[i]==substr[j])        {
             temp=i+1;
@@ -83,7 +83,7 @@ j++;
                 j++;
             }
  
-            if(substr[j]=='\0')            {
+            if(substr[j]=='\0'){
             	cout<<str;
                 exit(0);
             }
@@ -96,6 +96,4 @@ j++;
      if(temp==0)
         cout<<"Record not FOUND";	    
 }  
-}
-   
-   
+}   
